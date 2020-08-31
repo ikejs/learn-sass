@@ -1,0 +1,19 @@
+body {
+  background-color: cyan;
+}
+
+@mixin square($size, $radius: 0, $color: red) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+div {
+  @include square(100px, $radius: 10px, $color: orange);
+}
+
+/*# sourceMappingURL=style.scss.map */
